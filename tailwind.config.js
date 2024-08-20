@@ -9,7 +9,10 @@ export default {
       backgroundImage: {
         'login-bg': "url('./assets/images/hero-bg.jpg')",
         'signup-bg': "url('./assets/images/hero-bg-2.jpg')",
-      }
+      },
+      colors: {
+        'custom-blue': '#0E384C',
+      },
     },
     screens: {
       'mobile': '320px',
@@ -22,5 +25,9 @@ export default {
       'xl': '1280px',
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('button-group', '&.button-group:hover .button-child');
+    },
+  ],
 }

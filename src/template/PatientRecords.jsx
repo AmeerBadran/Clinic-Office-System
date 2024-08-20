@@ -13,18 +13,19 @@ export default function PatientRecords() {
         <span className="text-[#1E84B5]">Patient</span> Records
       </h1>
       <div className="grid grid-cols-1 2md:grid-cols-2 gap-6">
-      {reportData.map((data, index) => (
-        <ReportCard
-          key={index}
-          name={data.name}
-          procedure={data.procedure}
-          date={data.date}
-          cost={data.cost}
-          reports={data.reports}
-          medicalRecordText={data.medicalRecordText}
-          notesText={data.notesText}
-        />
-      ))}
+        {reportData.map((data, index) => (
+          <ReportCard
+            key={index}
+            name={data.name}
+            procedure={data.procedure}
+            date={data.date}
+            cost={data.cost}
+            reports={data.reports}
+            medicalRecordText={data.medicalRecordText}
+            notesText={data.notesText}
+            amountPaid={data.amountPaid}
+          />
+        ))}
       </div>
       <PaginationRounded count={8} onPageChange={handlePageChange} theme='light' />
     </div>
