@@ -18,11 +18,11 @@ import PatientRecords from "../template/PatientRecords";
 
 const router = createBrowserRouter([
   {
-    path: "/Clinic-Office-System/",
+    path: "/",
     element: <RootLayout />,
     children: [
       {
-        index: true,
+        path: "/",
         element: (
           <Home />
         ),
